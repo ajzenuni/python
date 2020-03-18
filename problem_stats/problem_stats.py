@@ -3,7 +3,7 @@ import pandas as pd
 
 def problemStats(url, token, relativeTime, tags):
     param = {"Api-Token": token, "relativeTime":relativeTime, "tag":tags}
-    finalList = {"Entity Name":[],"MTTR (minutes)":[],"MTBR (minutes)":[], "Number of Problems": []}
+    finalList = {"Entity Name":[],"MTTR (minutes)":[],"MTBF (minutes)":[], "Number of Problems": []}
     problemResponse = requests.get('{url}/api/v1/problem/feed'.format(url=url), params=param)
     problemList = problemResponse.json()
     
